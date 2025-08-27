@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Er du kvalifisert til å ta førerkort?</h2>
+
+    <p id="carmsh"></p>
+    
+    <h2 >Kan jeg åpne døren</h2>
+
+    <p id=" dørmsgg"></p>
+<script>
+
+    const age  = 10;
+    const tg_passed = true;
+
+    //if test
+    if (age >= 18 && tg_passed === true) {
+        document.getElementById("carmsh").innerHTML = "ja, du er kvalifisert til å ta førerkort";
+    } else {
+        document.getElementById("carmsh").innerHTML = "nei, du er ikke kvalifisert til å ta førerkort";
+    }
+
+
+    //sjekk om dør er låst, eventueltt om spiller har en nøkkel
+    const door_locked = true
+    const backpack = "key"
+
+    let utskrift = document.getElementById("dørmsgg")
+
+if (door_locked === false) {
+    utskrift.innerHTML = "døren er åpen, du kan gå inn";
+} else if (door_locked === true && backpack.includes("key")) {
+    utskrift.innerHTML = "du har en nøkkel, du kan åpne døren";
+} else {
+    utskrift.innerHTML = "døren er låst, du kan ikke gå inn";
+}
+
+</script>
+
+</body>
+</html>
