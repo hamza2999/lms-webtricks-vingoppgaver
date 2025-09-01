@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arraysss cheat sheet</title>
+</head>
+<body>
+    <ul id = "profiles"></ul>
+    <script>
+const lectures = [
+    { 
+        name: "Marius Akerbæk",
+        office: "D1-016",
+        email: "toremake@hiof.no",
+        birthyear: 1983
+    },
+    {
+        name: "daniella Blahut",
+        office: "D1-015",
+        email: "danielb@hiof.no",
+        birthyear: 1977
+    },
+    { 
+        name: "ann Charlotte karlsen",
+        office: "D1-061a",
+        email: "ackalrsen@hiof.no",
+        birthyear: 1993
+    },
+
+]
+
+const profiles = document.getElementById("profiles");
+
+lectures.forEach(lecture => {
+    profiles.innerHTML += `
+        <li>
+            <h3>${lecture.name}</h3>
+            <p>Office: ${lecture.office}</p>
+            <span> Alder: ${2025 - lecture.birthyear} </span>
+            <p>Email: ${lecture.email}</p>
+            <p>Birthyear: ${lecture.birthyear}</p>
+            <hr>
+        </li>
+    `;
+    console.log(lecture.name);
+});
+
+
+lectures
+    .filter(lecturer => lecturer.birthyear <= 1990)
+    .forEach(lecturer => {
+        profiles.innerHTML += `
+            <li>
+                <h3>${lecturer.name}</h3>
+                <p>Office: ${lecturer.office}</p>
+                <span> Alder: ${2025 - lecturer.birthyear} </span>
+                <p>Email: ${lecturer.email}</p>
+                <p>Birthyear: ${lecturer.birthyear}</p>
+                <hr>
+            </li>
+        `;
+    })
+
+    </script>
+    
+</body>
+</html>
