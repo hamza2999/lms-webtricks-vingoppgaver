@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="events">
+    </ul>
+    <script>
+        const year = {
+            events: [
+                "1969- creation og ARPANET",
+                "1971- first email ever sent",
+                "1981- IBM launches a PC",
+                "1990- Tim Berness Lee launches the first website",
+                "1998- Goog was founded"
+            ]
+        };
+        console.log("year.events", year.events);
+        const eventhtml = (
+            year.events.map(event => `<li>${event}</li>`).join('')
+        );
+    </script>
+</body>
+</html>

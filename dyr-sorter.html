@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="antall-dyr"></p>
+    <script>
+        const dyr = ["hund", "katt", "hest", "ku", "gris", "sau", "elefant", "løve", "tiger", "bjørn"]
+
+        dyr.sort()
+
+        const antalldyr = dyr.length
+
+        document.getElementById("antall-dyr").innerHTML = `det er totalt ${antalldyr} dyr i arrayet, for eksempel ${dyr[0]} og ${dyr[antalldyr - 1]}`
+
+
+
+</script>
+</body>
+</html>

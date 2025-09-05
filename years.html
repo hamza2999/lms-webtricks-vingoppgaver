@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="events"></ul>
+    <h1>Viktige årstall i historien</h1>
+    <script>
+const years = ["1066", "1564", "1455", "1346", "1215"]
+
+years.sort()
+years.reverse()
+console.log("years", years)
+const eventhtml = years.map(year => `<li>${year}</li>`).join('')
+
+document.getElementById("events").innerHTML = eventhtml
+    </script>
+</body>
+</html>

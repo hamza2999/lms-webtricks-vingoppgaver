@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Her er noen spill på iOS</h1>
+    <ul id ="filter">
+
+    </ul>
+    <script>
+
+
+const games = [
+    {
+        title: "angrybirds",
+        platforms: ["ios", "android"]
+    },
+    {
+        title: "nongram",
+        platforms: ["android"]
+    },
+    {
+        title: "plants vs zombies",
+        platforms: ["windows", "android", "macOS", "ios"]
+    },
+    {
+        title: "punball",
+        platforms: ["windows", "android"]
+    },
+    {
+        title: "planet zoo",
+        platforms: ["windows", "macOS"]
+    },
+    {
+        title: "wordle",
+        platforms: ["macOS", "windows"]
+    }
+];
+
+
+const iosgames = games.filter((game) => game.platforms.includes("ios"))
+document.getElementById("filter").innerHTML = iosgames.map((game) => `<li>${game.title}</li>`).join('')
+
+
+    </script>
+</body>
+</html>

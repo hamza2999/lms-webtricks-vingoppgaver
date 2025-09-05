@@ -13,19 +13,22 @@ const lectures = [
         name: "Marius Akerbæk",
         office: "D1-016",
         email: "toremake@hiof.no",
-        birthyear: 1983
+        birthyear: 1983,
+        courses: "(inføring i programmering, kommunikasjonsdesign, ui designprosjekt, utvikling av interaktive nettsider)"
     },
     {
         name: "daniella Blahut",
         office: "D1-015",
         email: "danielb@hiof.no",
-        birthyear: 1977
-    },
+        birthyear: 1977,
+        courses: "(designmetoder, ui designprosjekt)"
+    }, 
     { 
         name: "ann Charlotte karlsen",
         office: "D1-061a",
         email: "ackalrsen@hiof.no",
-        birthyear: 1993
+        birthyear: 1993,
+        courses: "(webutvikling, utvikling av interaktive nettsider)"
     },
 
 ]
@@ -57,10 +60,17 @@ lectures
                 <span> Alder: ${2025 - lecturer.birthyear} </span>
                 <p>Email: ${lecturer.email}</p>
                 <p>Birthyear: ${lecturer.birthyear}</p>
+                <ul>
+                    ${lecturer.courses
+                        .replace(/[()]/g, '') // remove parentheses
+                        .split(',')
+                        .map(course => `<li>${course.trim()}</li>`)
+                        .join('')}
+                </ul>
                 <hr>
             </li>
         `;
-    })
+    });
 
     </script>
     

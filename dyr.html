@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    
+
+    <script>
+const dyreListe = ["hund", "katt", "hest", "ku", "gris", "sau", "elefant", "løve", "tiger", "bjørn"]
+const utskrift = `her er det listet opp noen dyr, for eksempel ${dyreListe[3]} og ${dyreListe}`
+
+console.log(dyreListe)
+console.log(utskrift);
+
+document.getElementById("utskrift").innerHTML = utskrift;
+
+    </script>
+</body>
+</html>
